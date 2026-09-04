@@ -1,0 +1,235 @@
+{
+  "id": "internal-locus-of-control",
+  "title": "The quality you should most wish for your children",
+  "subtitle": "The benefits of having an internal locus of control",
+  "source": "The Economist",
+  "date": "Aug 27th 2026",
+  "addedAt": "2026-09-04T00:00:00.000Z",
+  "text": "If you could bestow any quality on your children, which one would you pick? Great intelligence? Empathy for humanity? Much greater respect for their parents? The ability to pass a fridge without opening it?\n\nDeborah Cobb-Clark, an economist at the University of Sydney, has a different answer: an internal locus of control. The concept of a locus of control was developed in the 1960s by a psychologist with the tremendous name of Julian Rotter. It is closely linked to the idea of agency. People with an internal locus of control believe that they are able to shape the world around them; those with an external locus of control tend to think that luck, destiny or other people determine their fate.\n\nIt turns out that being an internal is pretty useful. It motivates effort: one study by Ms Cobb-Clark and her co-authors looked at a cohort of newly unemployed people in Germany, and found that people with a more external locus of control searched less intensively for work than internals. Why spend time hunting for jobs, after all, if outcomes are disconnected from actions? Externals also had lower reservation wages, the minimum pay they were prepared to accept for a job.\n\nAn internal locus is linked to self-control: another paper concluded that households with a greater sense of agency save more of their wealth. It helps turn intention into action, too, seeming to prompt people with entrepreneurial aspirations to actually take the leap and become a founder.\n\nBeing an internal also seems to help your descendants. A paper by Warn Lekfuangfu of Universidad Carlos III de Madrid and her co-authors found that, other things being equal, the locus of control of expectant mothers is correlated with the effort they put into active parenting. Internals are more likely to think that time spent developing the skills of their sprogs will pay off. Externals are more likely to think: \"Little Rodney is just a helpless plaything of the gods.\"\n\nThe locus of control exists on a spectrum. Ms Cobb-Clark worries most about the small minority of people who never really develop a sense of their own agency at all. But many more routinely underestimate their power to exert control over their circumstances.\n\nIn her pointedly titled book, \"You Can Just Do Things\", Cate Hall cites research by Francis Flynn and Vanessa Lake, then of Columbia University, showing that people misjudge how likely others are to respond to requests for help. In a series of experiments, the researchers asked participants how many strangers they would have to approach to complete a range of tasks, from filling out questionnaires to borrowing a mobile phone to make a call. The actual numbers were much lower than the estimates, not because people are unbelievably nice, but because it is awkward to reject a direct request for help.\n\nIn another experiment, Steven Levitt of the University of Chicago got people who were dithering over a big decision to toss a virtual coin to help them make their choice. A toss in favour of change made it much more likely that someone would go ahead and break with the status quo. Those who did reported being much happier than those who did not. That suggests many people who would benefit from change lack the sense of agency to seize control of their own destiny without a nudge.\n\nIf an external locus of control is holding back individuals, it could be hindering organisations, too. A new paper, co-written by Feng Xu of the Harbin Institute of Technology, looks at adoption of artificial intelligence by manufacturing firms in Shenzhen. The researchers find that internals, who are more likely to see AI as a skill to master, are happier to share knowledge about their experiences of it. Externals, who are more likely to see the technology as a threat to their job security, are more prone to hiding information.\n\nWhat should managers do about this? They could test for locus of control in hiring processes: Andrej Karpathy, a quotable AI researcher, has said that as a trait, agency is both more powerful and scarcer than intelligence. Compensation and promotion systems should reward achievement as a matter of course, but that link can be made more explicit. Cultural norms can also be set to prompt people towards taking action. \"Ask forgiveness, not permission\" is a mantra that can have some pretty ugly consequences if you have lots of high-agency people and no guardrails. But the idea behind it is sound.",
+  "guide": {
+    "background": "本文是《经济学人》标准的议论文，讨论心理学核心概念「控制点」（locus of control）：内控型（internal）的人相信自己能塑造周围的世界，外控型（external）的人则把命运归于运气与环境。该概念由心理学家 Julian Rotter 于 20 世纪 60 年代提出，与「主观能动性」（agency）密切相关。文章综合经济学与心理学的多项实证研究，从个人努力、自控与行动、代际影响，一路推进到组织管理层面，最后给管理者提出招聘、激励与文化三方面建议。结构工整、用词精当，是绝佳的精读材料。",
+    "strategy": "拿到文章先花 90 秒，只读每段首尾句，画出结构图。你甚至不用读懂每个词，就能把握作者想说什么——这是「自上而下」阅读法，能极大缓解「每个词都查」的焦虑。",
+    "structure": [
+      {
+        "stage": "引子",
+        "desc": "设问开篇（最想给孩子什么品质？）→ 给出答案：internal locus of control → 定义概念"
+      },
+      {
+        "stage": "论点 1 · 个人层面",
+        "desc": "激励努力：德国失业者求职研究（外控型搜索强度低、保留工资更低）"
+      },
+      {
+        "stage": "论点 2 · 个人层面",
+        "desc": "促进自控与行动：储蓄更多；把创业意向变成实际行动"
+      },
+      {
+        "stage": "论点 3 · 代际层面",
+        "desc": "影响后代：孕期母亲控制点与育儿投入相关（internals vs. \"Little Rodney\"）"
+      },
+      {
+        "stage": "转折 / 深入",
+        "desc": "控制点是一个光谱；更多人低估了自身能动性"
+      },
+      {
+        "stage": "论据 A",
+        "desc": "人们高估了被拒绝的概率：求助实验（实际需要求助的陌生人数远低于估计）"
+      },
+      {
+        "stage": "论据 B",
+        "desc": "抛硬币实验：很多人需要「助推」才敢改变，改变者更幸福"
+      },
+      {
+        "stage": "升级 · 组织层面",
+        "desc": "外控型阻碍组织：深圳制造企业 AI 采用研究（内控型乐于分享，外控型倾向隐藏信息）"
+      },
+      {
+        "stage": "结论 / 建议",
+        "desc": "管理者该怎么做：招聘测试、激励挂钩、文化规范；先抑后扬肯定「先斩后奏」理念"
+      }
+    ],
+    "questions": [
+      {
+        "q": "作者认为父母最该给孩子什么品质？为什么？",
+        "hint": "看第二段：经济学家的答案是什么？这个概念由谁提出、含义是什么？",
+        "answer": "An internal locus of control（内控型控制点）。即相信自己能塑造周围世界的信念。它由心理学家 Julian Rotter 提出，与 agency（主观能动性）密切相关。作者认为它比智力、共情等更值得培养，因为后文证明它能带来努力、自控、行动力等一系列实际收益。"
+      },
+      {
+        "q": "作者用了哪几个层面的论据？（个人？代际？组织？）",
+        "hint": "注意每段的研究对象：失业者、家庭储蓄、孕妇、企业员工。",
+        "answer": "四个层面：① 个人努力（德国失业者求职研究）；② 自控与行动（储蓄研究、创业研究）；③ 代际影响（孕期母亲育儿研究）；④ 组织层面（深圳制造企业 AI 采用研究）。论证呈「个体 → 代际 → 组织」的递进结构。"
+      },
+      {
+        "q": "作者对管理者提了什么建议？",
+        "hint": "看倒数第二段设问 What should managers do about this? 之后的三个动作。",
+        "answer": "三条建议：① 在招聘中测试控制点（agency 比智力更强大也更稀缺）；② 让薪酬晋升与成就的挂钩更明确；③ 设定鼓励行动的文化规范。同时作者提醒：高能动性员工多而缺乏约束时，「先求原谅而非许可」会产生不良后果。"
+      },
+      {
+        "q": "求助实验中，人们实际需要求助的陌生人数与估计相比如何？原因是什么？",
+        "hint": "注意 not because... but because... 的转折结构。",
+        "answer": "实际数字远低于估计（The actual numbers were much lower than the estimates）。原因不是人们出奇地友善，而是当面拒绝一个直接求助请求会令人尴尬（it is awkward to reject a direct request for help）。"
+      },
+      {
+        "q": "末段「Ask forgiveness, not permission」一句体现了作者怎样的笔法？",
+        "hint": "先讲丑陋后果，再讲 But 后面的话——作者真正态度在哪半句？",
+        "answer": "典型的让步—转折（concession-rebuttal）笔法：先承认这句口头禅在高能动性员工多、缺乏护栏时会有 ugly consequences，再用 But the idea behind it is sound 肯定其核心理念。不绝对化、显得公允，是《经济学人》的典型收尾方式。"
+      }
+    ],
+    "sentences": [
+      {
+        "text": "People with an internal locus of control believe that they are able to shape the world around them; those with an external locus of control tend to think that luck, destiny or other people determine their fate.",
+        "parse": "分句A：People [with an internal locus of control] believe [that...]\n        └─ 介词短语修饰People          └─ 宾语从句\n分句B：those [with an external locus of control] tend to think [that...]\n        └─ 介词短语修饰those           └─ 宾语从句",
+        "note": "分号连接两个对称结构，those 指代 people，避免重复。这是对比论证的经典句式（People with X believe...; those with Y tend to think...），写作可直接模仿。"
+      },
+      {
+        "text": "In a series of experiments, the researchers asked participants how many strangers they would have to approach to complete a range of tasks, from filling out questionnaires to borrowing a mobile phone to make a call.",
+        "parse": "主语：the researchers\n谓语：asked\n间接宾语：participants\n直接宾语（宾语从句）：how many strangers they would have to approach [to complete...]\n    └─ 不定式表目的：to complete a range of tasks\n        └─ from... to... 举例说明tasks",
+        "note": "阅读技巧：看到 how many strangers they would have to approach，先找从句谓语 would have to approach，再问 approach 什么 → strangers；approach strangers 干什么 → to complete tasks。像剥洋葱一样一层层剥。"
+      },
+      {
+        "text": "\"Ask forgiveness, not permission\" is a mantra that can have some pretty ugly consequences if you have lots of high-agency people and no guardrails. But the idea behind it is sound.",
+        "parse": "句1：主语 = 引语 \"Ask forgiveness, not permission\"\n      谓语 = is → 表语 = a mantra [that can have...]\n              └─ 定语从句修饰 mantra，内含条件从句 if...\n句2：But + the idea behind it is sound（转折肯定）",
+        "note": "作者先让步（ugly consequences），再转折肯定（But... is sound）。读到这里要抓 But 后面的内容——那才是作者真正的态度。《经济学人》典型笔法：不绝对化，显得客观。"
+      }
+    ],
+    "vocab": {
+      "concepts": [
+        {
+          "term": "locus of control",
+          "meaning": "控制点（心理学核心概念：个体认为结果由自己还是外部因素决定）",
+          "context": "全文主题"
+        },
+        {
+          "term": "agency",
+          "meaning": "主观能动性（本文义）",
+          "context": "closely linked to the idea of agency"
+        },
+        {
+          "term": "internal / external",
+          "meaning": "内控型 / 外控型（人格倾向）",
+          "context": "全文对比核心"
+        },
+        {
+          "term": "reservation wage",
+          "meaning": "保留工资（经济学概念：愿意接受的最低薪酬）",
+          "context": "the minimum pay they were prepared to accept for a job"
+        },
+        {
+          "term": "cohort",
+          "meaning": "（研究中的）同期群、队列",
+          "context": "a cohort of newly unemployed people"
+        },
+        {
+          "term": "spectrum",
+          "meaning": "光谱、范围、谱系",
+          "context": "exists on a spectrum"
+        },
+        {
+          "term": "status quo",
+          "meaning": "现状",
+          "context": "break with the status quo"
+        },
+        {
+          "term": "dither",
+          "meaning": "犹豫不决",
+          "context": "people who were dithering over a big decision"
+        }
+      ],
+      "verbs": [
+        {
+          "expr": "bestow",
+          "meaning": "赋予、授予（正式）",
+          "example": "bestow any quality on your children"
+        },
+        {
+          "expr": "motivate effort",
+          "meaning": "激励努力",
+          "example": "It motivates effort"
+        },
+        {
+          "expr": "be correlated with",
+          "meaning": "与……相关",
+          "example": "correlated with the effort they put into"
+        },
+        {
+          "expr": "pay off",
+          "meaning": "得到回报",
+          "example": "will pay off"
+        },
+        {
+          "expr": "exert control over",
+          "meaning": "对……施加控制",
+          "example": "exert control over their circumstances"
+        },
+        {
+          "expr": "break with",
+          "meaning": "打破、脱离",
+          "example": "break with the status quo"
+        },
+        {
+          "expr": "hold back",
+          "meaning": "阻碍、抑制",
+          "example": "holding back individuals"
+        },
+        {
+          "expr": "be prone to",
+          "meaning": "倾向于、易于（多指负面倾向）",
+          "example": "more prone to hiding information"
+        },
+        {
+          "expr": "as a matter of course",
+          "meaning": "理所当然地",
+          "example": "reward achievement as a matter of course"
+        }
+      ],
+      "insiders": [
+        {
+          "word": "internal",
+          "common": "adj. 内部的",
+          "here": "n. 内控型的人（being an internal）"
+        },
+        {
+          "word": "sprog",
+          "common": "—（非正式）",
+          "here": "n. 小孩、孩子（developing the skills of their sprogs，英式俚语）"
+        },
+        {
+          "word": "guardrails",
+          "common": "n. 护栏（本义）",
+          "here": "（比喻）约束机制、行为底线"
+        },
+        {
+          "word": "mantra",
+          "common": "n. 咒语（宗教本义）",
+          "here": "（比喻）口头禅、信条"
+        },
+        {
+          "word": "take the leap",
+          "common": "leap 跳跃",
+          "here": "冒险一试、果断行动（become a founder 前）"
+        }
+      ],
+      "gems": [
+        {
+          "word": "pointedly titled",
+          "usage": "标题意味深长地叫做（In her pointedly titled book）——pointed 表示「尖锐、有所指」"
+        },
+        {
+          "word": "plaything of the gods",
+          "usage": "诸神的玩物——生动的比喻，写尽外控型的宿命感"
+        },
+        {
+          "word": "with the tremendous name of",
+          "usage": "名字响亮得惊人的——用夸张修辞制造幽默感"
+        },
+        {
+          "word": "unbelievably nice",
+          "usage": "好得难以置信——口语化插入让学术论证更鲜活"
+        },
+        {
+          "word": "a quotable AI researcher",
+          "usage": "语录频出的（其言论常被引用的）AI 研究者——一词勾勒人物特点"
+        }
+      ]
+    }
+  }
+}

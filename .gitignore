@@ -1,0 +1,14 @@
+# 隐私与本地文件 —— 切勿提交到公开仓库
+# .workbuddy 内含工作记忆/会议记录等个人信息
+.workbuddy/
+
+# 操作系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.local
+
+# 原始素材：不进公开仓库
+#   - 经济学人文章全文受版权保护，已内嵌的导读 JSON 已含学习所需正文
+#   - 导读指引.md.txt 为本地格式参照
+user_pasted_clipboard_long_content_as_file_The quality you shou.txt
+导读指引.md.txt
