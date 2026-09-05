@@ -2,6 +2,8 @@
 (function () {
   "use strict";
   var ER = window.ER, esc = ER.esc;
+  /* C(): 剥离 AI 输出中混入的 HTML 标签/实体，仅保留纯文本 */
+  var C = ER.cleanStr;
 
   var id = new URLSearchParams(location.search).get("id");
   var g = id ? ER.DB.get(id) : ER.DB.load()[0];
@@ -17,27 +19,27 @@
   function flowHtml() {
     return '<div class="flow">' + (gd.structure || []).map(function (s) {
       return '<div class="flow-item"><div class="flow-rail"><div class="flow-dot"></div><div class="flow-line"></div></div>' +
-        '<div class="flow-body"><b>' + esc(s.stage) + '</b><div class="d">' + esc(s.desc) + '</div></div></div>';
+        '<div class="flow-body"><b>' + esc(C(s.stage)) + '</b><div class="d">' + esc(C(s.desc)) + '</div></div></div>';
     }).join("") + "</div>";
   }
   function qHtml() {
     return (gd.questions || []).map(function (q, i) {
-      return '<div class="q-item"><div class="q"><span class="qn">Q' + (i + 1) + '</span>' + esc(q.q) + '</div>' +
-        (q.hint ? '<details><summary>💡 看提示</summary><div class="ans hint">' + esc(q.hint) + '</div></details>' : "") +
-        (q.answer ? '<details><summary>✅ 看参考答案</summary><div class="ans ref">' + esc(q.answer) + '</div></details>' : "") +
+      return '<div class="q-item"><div class="q"><span class="qn">Q' + (i + 1) + '</span>' + esc(C(q.q)) + '</div>' +
+        (q.hint ? '<details><summary>💡 看提示</summary><div class="ans hint">' + esc(C(q.hint)) + '</div></details>' : "") +
+        (q.answer ? '<details><summary>✅ 看参考答案</summary><div class="ans ref">' + esc(C(q.answer)) + '</div></details>' : "") +
         '</div>';
     }).join("");
   }
   function sentHtml() {
     return (gd.sentences || []).map(function (s, i) {
-      return '<div class="sent"><div class="orig"><span class="lbl">句子 ' + (i + 1) + ' · 原句</span>' + esc(s.text) + '</div>' +
-        '<div class="parse-wrap"><span class="lbl">结构拆解</span><div class="parse">' + esc(s.parse) + '</div></div>' +
-        (s.note ? '<div class="note"><span class="lbl">技巧 / 仿写点</span>' + esc(s.note) + '</div>' : "") + '</div>';
+      return '<div class="sent"><div class="orig"><span class="lbl">句子 ' + (i + 1) + ' · 原句</span>' + esc(C(s.text)) + '</div>' +
+        '<div class="parse-wrap"><span class="lbl">结构拆解</span><div class="parse">' + esc(C(s.parse)) + '</div></div>' +
+        (s.note ? '<div class="note"><span class="lbl">技巧 / 仿写点</span>' + esc(C(s.note)) + '</div>' : "") + '</div>';
     }).join("");
   }
   function table(headers, rows) {
     if (!rows || !rows.length) return "";
-    return '<table class="vocab-table"><thead><tr>' +
+    return '<table class="vocab-table rich"><thead><tr>' +
       headers.map(function (h) { return "<th>" + h + "</th>"; }).join("") +
       "</tr></thead><tbody>" + rows.map(function (r) {
         return "<tr>" + r.map(function (c) { return "<td>" + esc(c) + "</td>"; }).join("") + "</tr>";
@@ -48,16 +50,16 @@
     var part = "";
     if (v.concepts && v.concepts.length)
       part += "<h3>核心概念词</h3>" + table(["术语", "释义", "原文语境"],
-        v.concepts.map(function (x) { return ['<span class="term">' + esc(x.term) + "</span>", x.meaning, '<span class="ctx">' + esc(x.context) + "</span>"]; }));
+        v.concepts.map(function (x) { return [C(x.term), C(x.meaning), C(x.context)]; }));
     if (v.verbs && v.verbs.length)
       part += "<h3>高级动词 / 动词短语（写作可复用）</h3>" + table(["表达", "含义", "原文例句"],
-        v.verbs.map(function (x) { return ['<span class="term">' + esc(x.expr) + "</span>", x.meaning, '<span class="ctx">' + esc(x.example) + "</span>"]; }));
+        v.verbs.map(function (x) { return [C(x.expr), C(x.meaning), C(x.example)]; }));
     if (v.insiders && v.insiders.length)
       part += "<h3>熟词僻义</h3>" + table(["词", "常见义", "本文义 / 用法"],
-        v.insiders.map(function (x) { return ['<span class="term">' + esc(x.word) + "</span>", x.common, x.here]; }));
+        v.insiders.map(function (x) { return [C(x.word), C(x.common), C(x.here)]; }));
     if (v.gems && v.gems.length)
       part += "<h3>精妙小词</h3>" + table(["词", "用法妙处"],
-        v.gems.map(function (x) { return ['<span class="term">' + esc(x.word) + "</span>", x.usage]; }));
+        v.gems.map(function (x) { return [C(x.word), C(x.usage)]; }));
     return part;
   }
   function origHtml() {
@@ -76,9 +78,9 @@
 
   root.innerHTML =
     '<div class="card reader-head">' +
-      '<div class="kicker">' + esc(g.source || "The Economist") + (g.date ? " · " + esc(g.date) : "") + '</div>' +
-      '<h1>' + esc(g.title) + '</h1>' +
-      (g.subtitle ? '<div class="sub">' + esc(g.subtitle) + '</div>' : "") +
+      '<div class="kicker">' + esc(C(g.source || "The Economist")) + (g.date ? " · " + esc(g.date) : "") + '</div>' +
+      '<h1>' + esc(C(g.title)) + '</h1>' +
+      (g.subtitle ? '<div class="sub">' + esc(C(g.subtitle)) + '</div>' : "") +
       '<div class="meta">' + headTag + ' &nbsp;收录于 ' + esc((g.addedAt || "").slice(0, 10)) + ' · 词汇沉淀 ' + ER.vocabCount(g) + ' 条</div>' +
       '<div class="toc-pills">' +
         '<a href="#sec-structure">① 背景与结构导读</a>' +
@@ -91,8 +93,8 @@
     '</div>' +
 
     '<div class="card sec" id="sec-structure"><h2><span class="num">①</span>文章背景与结构导读</h2>' +
-      '<div class="prose"><p>' + esc(gd.background || "") + '</p></div>' + flowHtml() +
-      (gd.strategy ? '<div class="strategy">💡 <b>阅读策略</b>：' + esc(gd.strategy) + '</div>' : "") +
+      '<div class="prose"><p>' + esc(C(gd.background || "")) + '</p></div>' + flowHtml() +
+      (gd.strategy ? '<div class="strategy">💡 <b>阅读策略</b>：' + esc(C(gd.strategy)) + '</div>' : "") +
     '</div>' +
 
     '<div class="card sec" id="sec-questions"><h2><span class="num">②</span>阅读理解与思考检查</h2>' +

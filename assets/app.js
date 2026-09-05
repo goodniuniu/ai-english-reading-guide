@@ -158,6 +158,26 @@
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
       .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
+  /* 净化 AI 输出中可能混入的 HTML 标签/实体（如 <span class="term">…</span>），
+     通过 detached DOM 解码实体并剥离所有标签，仅保留纯文本。 */
+  function cleanStr(s) {
+    if (s == null) return "";
+    if (typeof s !== "string") return String(s);
+    var d = document.createElement("div");
+    d.innerHTML = s;
+    return (d.textContent || "").replace(/[ \t]+/g, " ").trim();
+  }
+  /* 递归净化对象/数组中的所有字符串（用于 AI 返回的导读 JSON） */
+  function deepClean(o) {
+    if (typeof o === "string") return cleanStr(o);
+    if (Array.isArray(o)) return o.map(deepClean);
+    if (o && typeof o === "object") {
+      var r = {};
+      Object.keys(o).forEach(function (k) { r[k] = deepClean(o[k]); });
+      return r;
+    }
+    return o;
+  }
   function toast(msg, isErr) {
     var t = document.getElementById("toast");
     if (!t) { t = document.createElement("div"); t.id = "toast"; t.className = "toast"; document.body.appendChild(t); }
@@ -189,7 +209,7 @@
     URL.revokeObjectURL(a.href);
   }
 
-  window.ER = { DB: DB, KB: KB, CFG: CFG, esc: esc, toast: toast, overlay: overlay, slugify: slugify, vocabCount: vocabCount, downloadFile: downloadFile };
+  window.ER = { DB: DB, KB: KB, CFG: CFG, esc: esc, cleanStr: cleanStr, deepClean: deepClean, toast: toast, overlay: overlay, slugify: slugify, vocabCount: vocabCount, downloadFile: downloadFile };
 
   /* ══════════════════════════════════════════
      index.html（目录页）逻辑
@@ -209,9 +229,9 @@
           ? '<span class="chip" style="background:#eef3ff;color:#1d4ed8">本地草稿</span>'
           : '<span class="chip">线上发布</span>';
         return '<div class="art-card" data-id="' + esc(g.id) + '">' +
-          '<div class="kicker">' + esc(g.source || "The Economist") + ' · ' + esc(g.date || "") + '</div>' +
-          '<h3>' + esc(g.title) + '</h3>' +
-          '<div class="sub">' + esc(g.subtitle || "") + '</div>' +
+          '<div class="kicker">' + esc(cleanStr(g.source || "The Economist")) + ' · ' + esc(g.date || "") + '</div>' +
+          '<h3>' + esc(cleanStr(g.title)) + '</h3>' +
+          '<div class="sub">' + esc(cleanStr(g.subtitle || "")) + '</div>' +
           '<div class="chips">' + tag +
           '<span class="chip">词汇 ' + v + ' 条</span>' +
           ((g.guide.questions || []).length ? '<span class="chip">思考题 ' + g.guide.questions.length + '</span>' : '') +
@@ -343,7 +363,7 @@
       document.getElementById("kbTable").querySelector("thead").innerHTML = thead;
       document.getElementById("kbTable").querySelector("tbody").innerHTML =
         (rows.length ? rows.map(function (r, idx) {
-          var cells = cell(r, curCat).map(function (c) { return "<td>" + esc(c) + "</td>"; }).join("");
+          var cells = cell(r, curCat).map(function (c) { return "<td>" + esc(cleanStr(c)) + "</td>"; }).join("");
           var srcHtml = r.sources.map(function (s) { return "<div>" + esc(s) + (r.count > 1 ? " ×" + r.count : "") + "</div>"; }).join("");
           var del = r.manual ? '<button class="btn danger" data-del="' + idx + '" style="padding:2px 8px;font-size:12px">删</button>' : "";
           return "<tr>" + cells + '<td class="num-cell">' + srcHtml + '</td><td>' + del + "</td></tr>";

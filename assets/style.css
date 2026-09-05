@@ -185,8 +185,8 @@ details .ans.ref { background: var(--green-soft); }
 }
 .vocab-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .vocab-table tr:hover td { background: #fbf8f2; }
-.vocab-table .term { font-weight: 700; color: var(--accent-deep); }
-.vocab-table .ctx { color: var(--ink-soft); font-style: italic; font-family: var(--serif); }
+.vocab-table td:first-child { font-weight: 700; color: var(--accent-deep); }
+.vocab-table.rich td:last-child { color: var(--ink-soft); font-style: italic; font-family: var(--serif); }
 .vocab-table .num-cell { color: #b0b6bf; font-size: 12px; white-space: nowrap; }
 
 /* 原文 */

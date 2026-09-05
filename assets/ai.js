@@ -98,7 +98,7 @@ JSON 结构要求（字段名必须完全一致）：
       try {
         raw = await callApi(text, cfg);
         parsed = extractJson(raw);
-        return normalize(parsed, text);
+        return normalize(window.ER.deepClean(parsed), text);
       } catch (e) {
         lastErr = e;
         // JSON 截断等解析错误时重试一次
