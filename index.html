@@ -1,78 +1,78 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-page-node-id="gqtPI3JmCnbIhp1EXixJ3h">
-<head data-page-node-id="rps567DZU9FNrO89tId5mG">
-<meta charset="UTF-8" data-page-node-id="F3slAUeoG3cUB2l0MMrskf">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="4SSRMsu6b445wvN7J8VEtt">
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI 指导英语阅读 · 目录</title>
-<link rel="stylesheet" href="assets/style.css" data-page-node-id="MXWIHJFqvSJb3NQMGgrD86">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="index" data-page-node-id="6e9Y9KqZjH1FziG8vtgu07">
-  <div class="topbar" data-page-node-id="CCtZj7341FoejObNn7KaAE">
-    <div class="brand" data-page-node-id="4W5JGkWYADOWE5Mno7tiW0"><span class="logo" data-page-node-id="c7baxIaVttMT0jxeq9LJw6">E</span>AI 指导英语阅读</div>
-    <div class="nav" data-page-node-id="C6CCEFyE0oXyETtG9NMoEQ">
-      <a class="active" href="index.html" data-page-node-id="QRRrLrPo80FwNCvlbhXRt3">文章目录</a>
-      <a href="knowledge.html" data-page-node-id="XMlDp0oilmpvRcRUVVE3CS">知识库</a>
-      <a href="reader.html?id=internal-locus-of-control" data-page-node-id="7RxdHtXNrRZAaPnO9uMAYj">样例导读</a>
+<body data-page="index">
+  <div class="topbar">
+    <div class="brand"><span class="logo">E</span>AI 指导英语阅读</div>
+    <div class="nav">
+      <a class="active" href="index.html">文章目录</a>
+      <a href="knowledge.html">知识库</a>
+      <a href="reader.html?id=internal-locus-of-control">样例导读</a>
     </div>
   </div>
 
-  <div class="wrap" data-page-node-id="ffBWzVKPS9FWvuJz4ira1n">
+  <div class="wrap">
     <!-- 导入新文章 -->
-    <div class="card" data-page-node-id="iRFc1wLBmVW79arCeKW5vZ">
-      <h2 data-page-node-id="AODDBlvWybh9MAU4L2W9Ri">📖 导入新文章 <span class="tag" data-page-node-id="eyCYc5k4I7G2lmx0dejC5j">粘贴或上传《经济学人》全文</span></h2>
+    <div class="card">
+      <h2>📖 导入新文章 <span class="tag">粘贴或上传《经济学人》全文</span></h2>
       <textarea id="pasteBox" rows="7" placeholder="将文章全文粘贴到这里……（含标题、日期更佳，AI 会自动识别）"></textarea>
-      <div class="btnrow" data-page-node-id="OgzWHkaMx4ecJ8EtPGwQdY">
-        <button class="btn primary" id="genBtn" data-page-node-id="PKlvO2v6Csacp6kIXfgSgK">✦ AI 生成导读（本地草稿）</button>
-        <label class="btn" style="cursor:pointer" data-page-node-id="2xWmmwAgiO1MlBxCkiKaJT">📄 选择 .txt 文件<input type="file" id="fileInput" accept=".txt,.md" style="display:none" data-page-node-id="TmYOyQ7RoKZWCcQ9MiSOTI"></label>
+      <div class="btnrow">
+        <button class="btn primary" id="genBtn">✦ AI 生成导读（本地草稿）</button>
+        <label class="btn" style="cursor:pointer">📄 选择 .txt 文件<input type="file" id="fileInput" accept=".txt,.md" style="display:none"></label>
       </div>
-      <div class="hintline" data-page-node-id="HSbxI4LDdcZugjQeiFGUpA">生成结果为<b data-page-node-id="HtyB9ydGMKs4JwA0EXGHQS">本地草稿</b>（仅你可见）。确认无误后在学习页点「⬇ 导出本篇 JSON」→ 存到项目 <code data-page-node-id="DXr2sEHzr69LTeSdM58yIC">content/</code> 目录 → 运行 <code data-page-node-id="7UjOhoESYkTd7eBLtxg3Qo">node build.js</code> → <code data-page-node-id="bpiAmT79LPcyawwaTr5K4G">git push</code>，即可向线上所有访客发布（详见学习页发布指引）。</div>
+      <div class="hintline">生成结果为<b>本地草稿</b>（仅你可见）。确认无误后在学习页点「⬇ 导出本篇 JSON」→ 存到项目 <code>content/</code> 目录 → 运行 <code>node build.js</code> → <code>git push</code>，即可向线上所有访客发布（详见学习页发布指引）。</div>
     </div>
 
     <!-- 文章目录 -->
-    <div class="card" data-page-node-id="e4Yj83M6fiOtfK6JWcKBew">
-      <h2 data-page-node-id="LSjd7wCiNTgNEjqPnRgszS">📚 文章目录</h2>
-      <div id="catalog" class="article-grid" data-page-node-id="b8uWMwFVOuYdcmqJmBHLeQ"></div>
+    <div class="card">
+      <h2>📚 文章目录</h2>
+      <div id="catalog" class="article-grid"></div>
     </div>
 
     <!-- AI 设置 -->
-    <div class="card" data-page-node-id="BGVFznDHZ5kTPimCtdL4pD">
-      <h2 data-page-node-id="8JCD4iW6zY59nRwUZPWNG2">⚙️ AI 设置 <span class="tag" data-page-node-id="vC7CDbhA40ghr2RfyPytqW">BYOK · Key 仅保存在本机浏览器</span></h2>
-      <div class="preset-row" data-page-node-id="ud3glkqUmxH6levMUTHqCW">
-        <button class="btn preset-btn" data-preset="kimi" data-page-node-id="h7YWzfAQy5zsLF9P36oQ9s">Kimi (Moonshot)</button>
-        <button class="btn preset-btn" data-preset="glm" data-page-node-id="0tviceNcVD4E6tsyGjXCac">智谱 GLM</button>
-        <button class="btn preset-btn" data-preset="custom" data-page-node-id="Q3LFC8Rg2G45mT3vlPiRDQ">自定义 (OpenAI 兼容)</button>
+    <div class="card">
+      <h2>⚙️ AI 设置 <span class="tag">BYOK · Key 仅保存在本机浏览器</span></h2>
+      <div class="preset-row">
+        <button class="btn preset-btn" data-preset="kimi">Kimi (Moonshot)</button>
+        <button class="btn preset-btn" data-preset="glm">智谱 GLM</button>
+        <button class="btn preset-btn" data-preset="custom">自定义 (OpenAI 兼容)</button>
       </div>
-      <div class="grid2" data-page-node-id="mzQeJcLczarwBPPm89Hf57">
-        <div data-page-node-id="nxJbGApoT5AyiTo2Ca8o9X">
-          <label class="fld" data-page-node-id="FkRa7ePfz1giUjC1NyrgZU">API 地址（chat/completions 完整 URL）</label>
-          <input type="text" id="cfgBase" placeholder="https://api.moonshot.cn/v1/chat/completions" data-page-node-id="aYSAQNbTwEHSt8r5JAGtvu">
+      <div class="grid2">
+        <div>
+          <label class="fld">API 地址（chat/completions 完整 URL）</label>
+          <input type="text" id="cfgBase" placeholder="https://api.moonshot.cn/v1/chat/completions">
         </div>
-        <div data-page-node-id="dNoEELqxTKxl9P8HHwiwdi">
-          <label class="fld" data-page-node-id="qrg32jApe4g979EDVRzx66">模型名</label>
-          <input type="text" id="cfgModel" placeholder="kimi-k2-0905-preview" data-page-node-id="6utk05ia3nMHZdamZECqE9">
+        <div>
+          <label class="fld">模型名</label>
+          <input type="text" id="cfgModel" placeholder="kimi-k2-0905-preview">
         </div>
       </div>
-      <label class="fld" data-page-node-id="EOzwQmXZRAKaqV4yivkz0T">API Key</label>
-      <input type="password" id="cfgKey" placeholder="sk-..." data-page-node-id="kdCpwoNbV0lZvS7ECV39f8">
-      <div class="btnrow" data-page-node-id="qhagkQpRBxWTSqH8NFhvqx">
-        <button class="btn" id="saveCfg" data-page-node-id="Lt70IgLQ3N4JLrFiD0aoy1">保存设置</button>
+      <label class="fld">API Key</label>
+      <input type="password" id="cfgKey" placeholder="sk-...">
+      <div class="btnrow">
+        <button class="btn" id="saveCfg">保存设置</button>
       </div>
-      <div class="hintline" data-page-node-id="QGKdy1alRRQE04pvf4FFfm">Kimi / GLM 接口已实测允许浏览器跨域调用，部署到 GitHub Pages 后同样可在线生成。仅创作者需要 Key；普通访客阅读不需要。</div>
+      <div class="hintline">Kimi / GLM 接口已实测允许浏览器跨域调用，部署到 GitHub Pages 后同样可在线生成。仅创作者需要 Key；普通访客阅读不需要。</div>
     </div>
 
     <!-- 数据管理 -->
-    <div class="card" data-page-node-id="nuDYiCeK5dPHbz0VGr7rwR">
-      <h2 data-page-node-id="WXUaBokGS4bozKnameVSej">💾 数据管理</h2>
-      <div class="btnrow" data-page-node-id="iu7I6COCTwYfXyDYb36y1z">
-        <button class="btn" id="exportBtn" data-page-node-id="y5ACU0giiNUpmRVlazTFkf">导出全部数据（JSON 备份）</button>
-        <label class="btn" style="cursor:pointer" data-page-node-id="8cfSWbIaZgNU8sauFCR5Y0">导入备份<input type="file" id="importFile" accept=".json" style="display:none" data-page-node-id="w5KecTKGCLmGDUyYqxwJxz"></label>
+    <div class="card">
+      <h2>💾 数据管理</h2>
+      <div class="btnrow">
+        <button class="btn" id="exportBtn">导出全部数据（JSON 备份）</button>
+        <label class="btn" style="cursor:pointer">导入备份<input type="file" id="importFile" accept=".json" style="display:none"></label>
       </div>
-      <div class="hintline" data-page-node-id="Tfo5KC55tzWO9uqhmCS8ZQ"><b data-page-node-id="UQqghtQDN9ee9LT2FJIhMr">备份/迁移</b>：导出备份用于把本地草稿搬到另一台电脑，导入后草稿合并进目录。<br data-page-node-id="ft9fP9alDKg9qDXFAs81G7">
-      <b data-page-node-id="1uI6XLGed9Aq2duTjrbmCx">发布网站</b>：线上文章库是仓库里的 <code data-page-node-id="VI7H4X8P8HIFBIRgAkDW40">content/*.json</code>（静态文件），不是浏览器数据——草稿确认后请导出 json 进 <code data-page-node-id="SruoO9H8HapVRQaqAOOA1U">content/</code> 并推送仓库。</div>
+      <div class="hintline"><b>备份/迁移</b>：导出备份用于把本地草稿搬到另一台电脑，导入后草稿合并进目录。<br>
+      <b>发布网站</b>：线上文章库是仓库里的 <code>content/*.json</code>（静态文件），不是浏览器数据——草稿确认后请导出 json 进 <code>content/</code> 并推送仓库。</div>
     </div>
   </div>
 
-  <div class="overlay" id="overlay" data-page-node-id="u5sOJmkDSimMGHCYsHdDo4"><div class="spinner" data-page-node-id="8Dntl7L8p0N6G3o7SXUlXF"></div><div class="msg" data-page-node-id="03FBOPfyxp0dKXqJTy9j3P">AI 正在生成导读……</div></div>
+  <div class="overlay" id="overlay"><div class="spinner"></div><div class="msg">AI 正在生成导读……</div></div>
   <script src="assets/seed.js"></script>
   <script src="assets/articles.js"></script>
   <script src="assets/ai.js"></script>
