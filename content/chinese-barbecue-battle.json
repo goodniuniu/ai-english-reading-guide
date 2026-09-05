@@ -1,0 +1,94 @@
+{
+  "id": "chinese-barbecue-battle",
+  "title": "The serious, rivalrous business of Chinese barbecue",
+  "subtitle": "Cities across China are vying for a slice of a 270bn-yuan industry",
+  "source": "The Economist",
+  "date": "Sep 3rd 2026",
+  "addedAt": "2026-09-05",
+  "text": "STEP ASIDE, Texas. The Chinese city of Qiqihar is laying claim to the global barbecue crown. Located in the country's far north-east, it recently concluded a barbecue festival, inviting the world to enjoy its flavour. Banners across the city of 4m assert it is the \"international barbecue capital\". That is a big claim for a place few outside China have heard of and equally few could pronounce (roughly, chee-chee-har).\n\nQiqihar's real beef is not with Texas brisket or Aussie snags but with other Chinese cities. Barbecue has become a big business in recent years. The grilling industry nationwide was worth around 270bn yuan ($40bn) in 2025. Several cities are vying for the thickest cut of that total.\n\nQiqiharians make a good case. Their region has some of China's largest grazing pastures. In the summer locals sit on the streets and toss tasty beef on coal-fired grills along with onions and sauerkraut. They are adamant that their meat is the best in China and that they have the figures to prove it. Between 2020 and 2025 the city's beef sales grew from around 5bn yuan to 30bn.\n\nThe biggest challenge to Qiqihar has come from Zibo, a city in eastern China specialising in meat skewers. In 2023 its barbecue stalls became a hit travel destination. Tourism income grew by 70% compared with the year before. Local officials were quick to support the trend. Banks were encouraged to hand out \"barbecue loans\" to help budding entrepreneurs source mutton and set up stalls. Accommodation became so scarce the government imposed price controls.\n\nThe craze in Zibo ignited a bigger barbecue battle. Jinzhou, another north-eastern town, has claimed for years to be China's pork-skewer capital. When its officials saw Zibo's success, they sent a delegation to figure out how best to bank their own shanks.\n\nResidents in Xuzhou, another eastern city, believed their meat-grilling tradition to be much older than Zibo's and more deserving of tourist spending. Stone carvings from 2,000 years ago purportedly show people eating meat on sticks. Local netizens claimed Zibo had pilfered their heritage.\n\nChina's summer travel spots often go viral on social media but quickly fade. Zibo has struggled to maintain excitement over its delicacies. Its heavy investments in grilling have reportedly led to many failed vendors. Meanwhile Qiqihar now supplies a network of restaurants across the country, which sell the region's beef and thus support its economy. Qiqihar may not pose a threat to Texan pitmasters but it has a healthy claim on China's cookout capital.",
+  "guide": {
+    "background": "本文是《经济学人》典型的轻量商业特写（business feature），以幽默笔调写中国城市间的「烧烤之战」：齐齐哈尔高举「国际烧烤之都」大旗，挑战者包括凭网红经济爆红的淄博、自诩烤猪肉串之都的锦州、主张两千年烤肉传统的徐州。全文约 500 词、七段，采用「现象引入 → 产业数据 → 逐城对比 → 格局评述」的新闻特写结构。轻松外壳下藏着严肃的经济学问题：网红城市营销能否持续？齐齐哈尔靠供应链（向全国餐厅供牛肉）而非流量取胜的路径，正是文章结尾给出的答案。文中多处双关（beef、cut、bank、snag）是精读的绝佳样本。",
+    "strategy": "先花 60 秒通读首尾段：开头点出齐齐哈尔「叫板德州」，结尾评述「流量退潮、供应链长红」——全文立场已明。中间各段按城市分层（齐齐哈尔 → 淄博 → 锦州 → 徐州 → 回到对比），读时给每段贴一个城市标签即可。遇到 beef、cut、bank 这类「认识却别扭」的词，先怀疑是双关，再结合语境确认僻义。",
+    "structure": [
+      { "stage": "引子", "desc": "STEP ASIDE, Texas → 齐齐哈尔自封「国际烧烤之都」，举办烧烤节；以「境外鲜有人听过、读不出」反衬其野心" },
+      { "stage": "产业全景", "desc": "真正的对手是中国城市：2025 年全国烧烤产业约 2700 亿元，多城争夺最大份额" },
+      { "stage": "主角 A · 齐齐哈尔", "desc": "底气：东北大草场 + 街头炭火烤牛肉；牛肉销售额 2020–2025 从约 50 亿增至 300 亿" },
+      { "stage": "主角 B · 淄博", "desc": "2023 年烧烤摊成顶流：旅游收入 +70%；官方推「烧烤贷」、住宿限价——政府全力托举" },
+      { "stage": "跟进者 · 锦州", "desc": "淄博狂热点燃更大战局：锦州派代表团取经，想把自家猪串「变现」" },
+      { "stage": "争议者 · 徐州", "desc": "自认烤肉传统更古老（2000 年前石刻），网民指控淄博「盗用文化遗产」" },
+      { "stage": "结局对比", "desc": "网红快起快落：淄博热度难续、商户折戟；齐齐哈尔靠全国供应链稳住基本盘" },
+      { "stage": "结论", "desc": "让步—转折收尾：虽撼动不了德州 pitmaster，但「中国户外烧烤之都」名号当之无愧" }
+    ],
+    "questions": [
+      { "q": "根据文意，齐齐哈尔在烧烤产业中的核心竞争优势是什么？\nA. 广阔牧场带来的优质牛肉　B. 展示烤肉场景的古老石刻　C. 面向年轻创业者的烧烤贷款　D. 靠近德州烧烤大师的地理位置",
+        "hint": "第三段：齐齐哈尔人的「底气」来自什么？用哪组数据证明？",
+        "answer": "A。第三段明确给出证据链：其地区拥有中国最大的部分放牧草场（grazing pastures），且 2020–2025 年牛肉销售额从约 50 亿增至 300 亿（have the figures to prove it）。B 是徐州的主张，C 是淄博的政府举措，D 本身是文章开篇的幽默对照、并非真实竞争关系。" },
+      { "q": "哪座城市的地方政府通过鼓励银行放贷、给住宿限价来积极扶持烧烤产业？\nA. 锦州　B. 徐州　C. 齐齐哈尔　D. 淄博",
+        "hint": "第四段末三句：谁在发「烧烤贷」？谁在实施价格管制？",
+        "answer": "D（淄博）。2023 年淄博烧烤爆红后，银行被鼓励发放 barbecue loans 帮助 budding entrepreneurs 采购羊肉、搭建摊位；住宿紧缺到政府不得不 impose price controls。锦州是「派代表团取经」，徐州是「争文化遗产」，齐齐哈尔的优势在供应链而非行政扶持。" },
+      { "q": "关于淄博烧烤热的长期结果，文章暗示了什么？\nA. 难以维持初期热度，导致大量商家倒闭　B. 永久取代德州牛胸肉成为全球烧烤标杆　C. 成功吸收了锦州和徐州的烧烤传统　D. 与社交媒体彻底脱钩，完全依赖本地消费",
+        "hint": "末段前四句：China's summer travel spots often go viral... but quickly fade 之后说了什么？",
+        "answer": "A。末段点明：夏季网红景点常 go viral 但 quickly fade；淄博 struggled to maintain excitement，其重金投入 reportedly 导致许多 vendors 失败。文章用它反衬齐齐哈尔的供应链模式——卖牛肉的餐饮网络持续支撑地方经济。" },
+      { "q": "第二段首句 Qiqihar's real beef is not with Texas brisket... 中的 beef 是什么意思？这种用词妙在哪？",
+        "hint": "beef 常见义是「牛肉」，但 have a beef with sb 是固定搭配。双关在本文语境里如何同时成立？",
+        "answer": "beef 此处是俚语「抱怨、争执、过节」（have a beef with sb = 与某人有梁子），整句意为「齐齐哈尔真正较劲的对象不是德州牛胸肉，而是中国其他城市」。妙在双关：本文谈的恰是烤牛肉产业，字面义与僻义同时在场，一语双雕——这是《经济学人》标题与导语层常见的文字游戏。" },
+      { "q": "结尾把淄博与齐齐哈尔的命运做了怎样的对照？作者更认同哪种模式？",
+        "hint": "找末段的对比词：Meanwhile 前后在写谁？什么导致「failed vendors」vs「support its economy」？",
+        "answer": "对照是「流量型 vs 供应链型」：淄博依赖社交媒体爆红与重金投入，热度退潮后商户大量失败；齐齐哈尔 meanwhile 向全国餐厅网络供应牛肉，需求稳定、持续支撑经济。作者的倾向藏在让步—转折句里：虽然齐齐哈尔 pose 不了对德州的威胁（让步），但 has a healthy claim on 中国户外烧烤之都（肯定）——健康的、可持续的资格，正是对供应链模式的隐性认可。" }
+    ],
+    "sentences": [
+      { "text": "That is a big claim for a place few outside China have heard of and equally few could pronounce (roughly, chee-chee-har).",
+        "parse": "主干：That is a big claim [for a place...]\n                                        └─ for 引出评价对象\na place 后接两个并列定语从句（关系词省略）：\n  ① (that) few outside China have heard of\n       └─ few (people) outside China = 主语，outside China 后置定语\n  ② and (that) equally few could pronounce\n       └─ equally few 承前省略 people outside China",
+        "note": "两个定语从句共享先行词 place 且都省略关系词——口语化却工整。few outside China have heard of 中 hear of（听说）与 pronounce（读出音）形成「听说过都没几个、能读出的更少」的递进幽默。写作可借用句式：a place/opinion few A ... and equally few B ..." },
+      { "text": "Accommodation became so scarce the government imposed price controls.",
+        "parse": "Accommodation became so scarce (that) the government imposed price controls.\n     └─ 主语   └─系动词 └─表语        └─ 结果状语从句（that 被省略）\nso + adj. + (that) 从句 = 如此……以至于……",
+        "note": "so...that 的结果状语从句省略 that，在新闻英语里极常见，阅读时要主动补回：became so scarce (that)...。近义表达请对比积累：so scarce that...（程度结果）、too scarce to...（否定结果）。写申论/报道时，so + 形容词 + 主谓 的紧凑版能让句子更利落。" },
+      { "text": "Qiqihar may not pose a threat to Texan pitmasters but it has a healthy claim on China's cookout capital.",
+        "parse": "分句A：Qiqihar may not pose a threat to Texan pitmasters\n              └─ may not 情态让步      └─ pose a threat to 固定搭配\n分句B（but 转折）：it has a healthy claim on China's cookout capital\n                        └─ have a claim on/to 对……拥有正当权利/资格\n                        └─ healthy 修饰 claim：站得住脚的、名正言顺的",
+        "note": "结尾的让步—转折（may not... but...）是《经济学人》标志性收束：先自贬一半再立论。三个写作可复用搭配：pose a threat to（构成威胁）、have a claim on/to（拥有正当资格）、a healthy claim（经得起推敲的主张）。呼应首句 laying claim to the global barbecue crown，claim 首尾扣环。" }
+    ],
+    "vocab": {
+      "concepts": [
+        { "term": "barbecue battle / rivalry", "meaning": "烧烤之战、城市间产业竞争（本文主线）", "context": "ignited a bigger barbecue battle" },
+        { "term": "go viral", "meaning": "在社交媒体上爆红、病毒式传播（网红经济核心词）", "context": "summer travel spots often go viral on social media but quickly fade" },
+        { "term": "price controls", "meaning": "价格管制（政府干预市场的行政手段）", "context": "the government imposed price controls" },
+        { "term": "tourism income", "meaning": "旅游收入（衡量文旅热度的硬指标）", "context": "Tourism income grew by 70%" },
+        { "term": "vendor", "meaning": "摊贩、商贩（个体经营者，与 chain/brand 相对）", "context": "many failed vendors" },
+        { "term": "supply network", "meaning": "供应网络（B 端供应链模式，与 C 端流量模式相对）", "context": "supplies a network of restaurants across the country" },
+        { "term": "heritage", "meaning": "文化遗产、传统（文旅争夺的焦点资源）", "context": "Zibo had pilfered their heritage" },
+        { "term": "craze", "meaning": "狂热、风靡一时的热潮（多含「难以持久」的暗示）", "context": "The craze in Zibo ignited a bigger barbecue battle" }
+      ],
+      "verbs": [
+        { "expr": "lay / lay claim to", "meaning": "声称拥有、主张对……的所有权（比 claim 更正式有力）", "example": "laying claim to the global barbecue crown → The small coastal town laid claim to being the historical birthplace of the country's modern navy." },
+        { "expr": "vie for", "meaning": "竞争、角逐、争夺（vie 的现在分词 vying，正式书面语）", "example": "Several cities are vying for the thickest cut of that total → Dozens of ambitious startups are currently vying for the lucrative government contract." },
+        { "expr": "assert", "meaning": "坚称、断言（源自拉丁语 asserere「紧紧系联」，含不容置疑的力度）", "example": "Banners across the city of 4m assert it is the \"international barbecue capital\". 词族：assertion / assertive / reassert" },
+        { "expr": "impose", "meaning": "强制实行、强加（im-「在上」+ pose「放」＝把规章压到别人头上）", "example": "the government imposed price controls → impose a ban on / impose taxes / impose on someone. 词族：imposition / imposing / superimpose" },
+        { "expr": "ignite", "meaning": "点燃；激起、引发（比喻用法极常见）", "example": "The craze in Zibo ignited a bigger barbecue battle." },
+        { "expr": "pose a threat to", "meaning": "对……构成威胁（pose 此处意为「造成、引起」）", "example": "Qiqihar may not pose a threat to Texan pitmasters → Unregulated industrial activities pose a major threat to the local ecosystem." },
+        { "expr": "pilfer", "meaning": "偷窃、盗用（多指小偷小摸，此处为网民的夸张指控）", "example": "Local netizens claimed Zibo had pilfered their heritage." },
+        { "expr": "conclude", "meaning": "结束、落幕（con-「一起」+ clude「关闭」；另有「得出结论」义）", "example": "it recently concluded a barbecue festival" },
+        { "expr": "bank", "meaning": "（v. 把钱存入银行→）赚取、攒下（口语化商业表达）", "example": "figure out how best to bank their own shanks" },
+        { "expr": "source", "meaning": "（v.）采购、寻源（商业高频动词，source sth from sb）", "example": "help budding entrepreneurs source mutton and set up stalls" }
+      ],
+      "insiders": [
+        { "word": "beef", "common": "n. 牛肉", "here": "n. 俚语：抱怨、争执、过节（real beef is not with...＝真正较劲的对象不是……）。与全文烤牛肉主题构成双关" },
+        { "word": "snag", "common": "n. 障碍、意外困难；v. 抢到、截获", "here": "n. 澳洲俚语：香肠（Aussie snags），与 Texas brisket 并列为各国烧烤符号" },
+        { "word": "cut", "common": "v. 切、割", "here": "n. （肉）切块；引申「份额」——the thickest cut of that total 既指最厚的肉，也指最大的一块蛋糕" },
+        { "word": "bank", "common": "n. 银行", "here": "v. 存入银行→赚取、变现（bank their own shanks＝把自家猪串变成收入）" },
+        { "word": "crown", "common": "n. 王冠、王位", "here": "n. 桂冠、头衔（the global barbecue crown＝全球烧烤之冠）" },
+        { "word": "shank", "common": "n. （人的）小腿", "here": "n. （牲畜的）肘子、小腿肉（与 cut、bank 连用，满句烧烤行话）" },
+        { "word": "hit", "common": "v. 打、击打", "here": "adj./n. 爆红的、大热门（a hit travel destination＝网红打卡地）" }
+      ],
+      "gems": [
+        { "word": "step aside", "usage": "让开、靠边站（STEP ASIDE, Texas 全大写开场——直接对德州喊话，气势先声夺人）" },
+        { "word": "adamant", "usage": "坚决的、寸步不让的（they are adamant that... 比 insist 更强调态度之硬）" },
+        { "word": "budding", "usage": "初露头角的、萌芽的（budding entrepreneurs——比 new/young 生动，自带「含苞待放」画面感）" },
+        { "word": "purportedly", "usage": "据称、据传（报道中用于转述未经证实的说法，与 allegedly 近义，体现新闻的严谨留白）" },
+        { "word": "scarce", "usage": "稀缺的、紧缺的（become so scarce——写资源紧张的精准词，比 not enough 高级）" },
+        { "word": "make a good case", "usage": "论据充分、有说服力（Qiqiharians make a good case——议论文转述对方观点的地道开场）" },
+        { "word": "pitmaster", "usage": "烧烤大师（pit 烤坑 + master，德州 BBQ 行话；构词法：场所+master，如 webmaster）" },
+        { "word": "cookout", "usage": "户外烧烤聚会（cook + out，与 barbecue 的区别：cookout 强调户外聚会场景）" }
+      ]
+    }
+  }
+}
