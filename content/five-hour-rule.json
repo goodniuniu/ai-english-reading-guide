@@ -1,0 +1,92 @@
+{
+  "id": "five-hour-rule",
+  "title": "The Five-Hour Rule: Turn a Wasted Day Into a Productive One",
+  "subtitle": "Reserve five hours a week for deliberate learning — it compounds into roughly 250 hours a year",
+  "source": "精选外刊 · 双语精读",
+  "date": "Sep 6th 2026",
+  "addedAt": "2026-09-06",
+  "text": "At 10 p.m., many people have the same uncomfortable feeling. The day was full, but little seems to remain from it. They answered messages, attended meetings, finished small tasks, watched a few short videos during breaks, and dealt with whatever appeared in front of them. They were busy for hours, yet they cannot point to anything that made them more capable than they were yesterday.\n\nThis is where the idea behind the \"five-hour rule\" becomes useful. The phrase is commonly used to describe a simple practice: reserve about five hours a week, often one hour each weekday, for deliberate learning. That hour might be spent reading, studying a new skill, reflecting on mistakes, or experimenting with an idea. What matters is that the time is protected from routine work and passive entertainment.\n\nThe difficulty is rarely finding an empty hour. Most adults do not have one waiting conveniently in their schedules. The more realistic challenge is deciding which activities deserve less of their attention. A person may spend twenty minutes checking social media before breakfast, another twenty after lunch, and forty minutes moving between videos at night. None of these moments feels significant. Together, they can consume the exact hour that supposedly does not exist.\n\nDeliberate learning also feels different from ordinary busyness because the reward is delayed. Answering an email gives an immediate sense of completion. Reading twenty pages of a difficult book may produce nothing visible today. Practicing a language for an hour does not suddenly make someone fluent. Yet repeated over months, these quiet sessions create knowledge and skills that daily tasks rarely provide.\n\nThe five-hour rule is less interesting as a rigid formula than as a way to rethink time. Missing a day does not ruin the system, and an hour does not have to happen at the same time every morning. The useful question is whether some part of each week is being invested in abilities that will still matter months or years later.\n\nA day can disappear through dozens of necessary but forgettable activities. Protecting even a small part of it changes the balance. You still answer messages, work, commute, rest, and watch things for pleasure. But somewhere inside that ordinary week, there is a period that belongs to your future self. Five hours may look small on a calendar. Repeated across a year, it becomes roughly 250 hours of focused learning. That is enough time to make an ordinary year look very different from the one before it.",
+  "guide": {
+    "background": "本文是一篇自我提升类说理文（self-improvement essay），讨论风行硅谷与知识圈的「五小时法则」：每周预留约五小时（常见做法是工作日每天一小时）用于刻意学习（deliberate learning）。文章采用经典的「痛点引入 → 概念界定 → 拆解借口 → 心理机制 → 重新定义 → 算账收尾」结构。核心论点有三：① 空耗感的根源不是忙，而是没有「沉淀」；② 时间不是没有，而是被碎片娱乐蚕食（20+20+40 分钟的账算得极妙）；③ 主动学习的回报是延迟的，与即时完成感的日常事务形成对比。语言平实但论证严密，多处数字论证与转折结构是精读范本。",
+    "strategy": "先抓两组对比词：immediate（即时）vs delayed（延迟）、busy（忙）vs capable（有能力）。全文一切论证都围着「即时完成感是幻觉、延迟回报才是复利」展开。读每段先问：这段在回应什么借口或疑虑？（没时间？坚持不了？看不到效果？）——这是一篇「逐条拆解读者心理防线」的说理文，跟着作者的反驳走即可。",
+    "structure": [
+      { "stage": "痛点引入", "desc": "晚上十点的空耗感：一天排满——回消息、开会、刷视频——却说不出什么让自己比昨天更有能力" },
+      { "stage": "概念界定", "desc": "五小时法则：每周约 5 小时（工作日每天 1 小时）用于刻意学习；关键在「从日常事务与被动娱乐中保护出来」" },
+      { "stage": "拆解借口 ①「没时间」", "desc": "困难不是找空闲小时，而是决定哪些活动少花注意力；早餐前 20 分钟 + 午饭后 20 分钟 + 晚间 40 分钟 = 那个「不存在」的一小时" },
+      { "stage": "心理机制 · 即时诱惑", "desc": "日常事务给即时完成感：回一封邮件立刻有 sense of completion；读书 20 页、练 1 小时外语今天毫无可见变化" },
+      { "stage": "心理机制 · 延迟回报", "desc": "Yet 转折收束：数月重复的 quiet sessions 积累出日常事务 rarely provide 的知识与技能——先抑后扬落到复利" },
+      { "stage": "重新定义", "desc": "五小时法则不是死板的公式而是重新看待时间的方式：漏掉一天无伤大雅；有用的问题是每周是否有一部分投入到「数月数年后仍有用」的能力上" },
+      { "stage": "算账收尾", "desc": "每周 5 小时看似渺小，一年累积约 250 小时专注学习——足以让平凡的一年与之前大不相同；「那段时间属于未来的你」" }
+    ],
+    "questions": [
+      { "q": "第一段描写的「晚上十点的不适感」具体是什么？作者认为它的根源是什么？",
+        "hint": "注意 busy 与 capable 的对比：忙了一整天，缺的是什么？看 They were busy for hours, yet... 这句转折。",
+        "answer": "空耗感：一天排得很满（回消息、开会、小事、短视频），却「说不出有任何东西让自己比昨天更有能力」。根源不是忙本身，而是这些活动全是即时消耗、没有沉淀——busy for hours 与 cannot point to anything 构成强烈反差，点出「忙碌≠成长」的核心矛盾，为引出五小时法则铺垫。" },
+      { "q": "五小时法则的定义是什么？其中 What matters is that... 强调的关键条件是什么？",
+        "hint": "第二段冒号后的做法，以及最后一句 What matters 引导的从句。",
+        "answer": "每周预留约 5 小时（常见为工作日每天 1 小时）用于刻意学习——阅读、学新技能、复盘错误、验证想法。关键条件（What matters）是：这段时间必须「从日常工作和被动娱乐中保护出来」（protected from routine work and passive entertainment）。注意 protected 是被动语态，暗示需要主动设防——时间不会自己空出来。" },
+      { "q": "第三段算了一笔怎样的时间账？这笔账在论证中起什么作用？",
+        "hint": "找出三个数字：早餐前、午饭后、晚间各刷了多久？加起来是多少？与哪个说法矛盾？",
+        "answer": "早餐前刷社媒 20 分钟 + 午饭后 20 分钟 + 晚间在视频间切换 40 分钟 = 80 分钟。作者用加法证明：这些「单独看都不算什么」的碎片（None of these moments feels significant）加在一起，恰好就是那个我们声称「根本不存在」的一小时（consume the exact hour that supposedly does not exist）。作用：把「没时间」这一借口量化拆穿，论证方式比直接说教更有说服力。" },
+      { "q": "第四段说主动学习与日常忙碌的本质区别是什么？作者是用什么手法说明的？",
+        "hint": "找出 reward is delayed 这句后的一组三连对比：回邮件、读书、练语言各是什么效果？",
+        "answer": "本质区别是回报的时间结构：日常事务给即时完成感（immediate sense of completion），主动学习的回报是延迟的（delayed）。手法是三连排比、递进对照：回邮件→立刻有完成感；读 20 页难书→今天毫无可见产出；练 1 小时外语→不会突然流利。最后用 Yet 转折收束：数月重复后，quiet sessions 积累出的知识技能是 daily tasks rarely provide 的——先抑后扬，落到复利效应。" },
+      { "q": "结尾段如何用数字收束全文？「belong to your future self」这个说法妙在哪里？",
+        "hint": "两个数字的换算关系：每周 5 小时 → 一年多少小时？再看全文首尾都在写「一天/一年」的时间尺度。",
+        "answer": "换算：每周 5 小时 × 约 50 周 ≈ 一年 250 小时专注学习——与开头「一天如何在琐碎中消失」形成时间尺度上的首尾呼应：一天会散掉，一年却能攒出来。future self 之妙在于把抽象的「长期主义」具象成一个可共情的人——你不是在挤时间，而是在给「未来的自己」划拨资产，与 invest（投资）的用词呼应，把说理升华为价值观。" }
+    ],
+    "sentences": [
+      { "text": "A person may spend twenty minutes checking social media before breakfast, another twenty after lunch, and forty minutes moving between videos at night.",
+        "parse": "主干：A person may spend twenty minutes [checking social media] [before breakfast]\n                                            └─ spend + 时间 + doing 结构\n并列宾语（省略补全）：\n  ① twenty minutes checking social media before breakfast\n  ② another twenty (minutes) [checking social media] after lunch\n       └─ 省略 minutes 与 doing（承前）\n  ③ forty minutes moving between videos at night",
+        "note": "spend + 时间 + doing 的三连同位排比，后两项承前省略（another twenty = another twenty minutes checking...）。阅读时主动补全省略成分，写作时模仿这种省略——三个时间状语（before breakfast / after lunch / at night）天然形成一天的推移，画面感极强，是「列举式论证」的模板句。" },
+      { "text": "Yet repeated over months, these quiet sessions create knowledge and skills that daily tasks rarely provide.",
+        "parse": "主干：these quiet sessions create knowledge and skills [...]\n状语：Yet (when they are) repeated over months\n        └─ 过去分词短语作时间状语（逻辑主语=主句主语，被动关系）\n定语从句：(that) daily tasks rarely provide\n        └─ that 作 provide 的宾语，修饰 knowledge and skills",
+        "note": "repeated over months 是「分词短语替代状语从句」的紧凑写法（= when they are repeated），注意分词的逻辑主语必须与主句主语一致（sessions 被重复）。daily tasks rarely provide 中 that 被省略且后置——宾语从句式的定语从句。写作模板：Yet repeated over + 时间段，X creates Y that Z rarely provides（先让步「当下无感」，再转折「长期复利」）。" },
+      { "text": "The five-hour rule is less interesting as a rigid formula than as a way to rethink time.",
+        "parse": "主干：The five-hour rule is less interesting [as a rigid formula] than [as a way to rethink time]\n                                            └─ less...than 比较结构，as 介词短语对比两个身份\n方式状语对比：as a rigid formula（作为死公式）vs as a way to rethink time（作为重新看待时间的方式）",
+        "note": "less A than B 结构＝「与其说是 A，不如说是 B」，B 才是作者强调的重心——读比较句永远问：后半句是什么？此处它完成全文的关键「降级重新定义」：把法则从「待执行的公式」降为「思维工具」，顺带化解了读者对坚持性的焦虑（与下句 Missing a day does not ruin the system 呼应）。写作可直接套用：X is less interesting as A than as B。" }
+    ],
+    "vocab": {
+      "concepts": [
+        { "term": "the five-hour rule", "meaning": "五小时法则（每周预留约 5 小时用于刻意学习的自我提升理念）", "context": "reserve about five hours a week... for deliberate learning" },
+        { "term": "deliberate learning", "meaning": "刻意学习（有目的、有投入的主动学习，与被动消遣相对）", "context": "reserve about five hours a week... for deliberate learning" },
+        { "term": "passive entertainment", "meaning": "被动娱乐（刷视频式单向接收，无需投入注意力的消遣）", "context": "protected from routine work and passive entertainment" },
+        { "term": "delayed reward", "meaning": "延迟回报（本文核心机制：学习的收益滞后显现）", "context": "Deliberate learning also feels different... because the reward is delayed" },
+        { "term": "sense of completion", "meaning": "完成感（即时反馈的心理来源，日常事务的诱饵）", "context": "gives an immediate sense of completion" },
+        { "term": "attention", "meaning": "注意力（本文视为可分配的稀缺资源）", "context": "which activities deserve less of their attention" },
+        { "term": "future self", "meaning": "未来的自己（把长期学习具象为对「未来的我」的投资）", "context": "a period that belongs to your future self" },
+        { "term": "compound effect", "meaning": "复利效应（5 小时/周 → 250 小时/年的累积逻辑）", "context": "Repeated across a year, it becomes roughly 250 hours of focused learning" }
+      ],
+      "verbs": [
+        { "expr": "reserve ... for", "meaning": "预留、保留（时间/资源专用）", "example": "reserve about five hours a week for deliberate learning → Reserve the last hour of each workday for deep reading." },
+        { "expr": "reflect on", "meaning": "复盘、反思（正式表达，比 think about 精准）", "example": "reflecting on mistakes → Great managers set aside time each quarter to reflect on what worked and what failed." },
+        { "expr": "experiment with", "meaning": "尝试、试验（对新想法的小规模验证）", "example": "experimenting with an idea → The team spent a month experimenting with a new workflow before adopting it." },
+        { "expr": "consume", "meaning": "消耗、耗费（时间/资源，比 use 更有「蚕食」感）", "example": "they can consume the exact hour that supposedly does not exist → Fragmented meetings consumed nearly half of her working day." },
+        { "expr": "invest in", "meaning": "投入（时间/精力/金钱以获长期回报）", "example": "some part of each week is being invested in abilities → Every weekend he invests two hours in learning data analysis." },
+        { "expr": "point to", "meaning": "举出、指出（证据/例子，比 say 更强调「拿出依据」）", "example": "they cannot point to anything that made them more capable → Analysts point to three factors behind the company's recovery." },
+        { "expr": "deserve", "meaning": "值得、应得（用于注意力/资源的取舍判断）", "example": "deciding which activities deserve less of their attention → Not every email deserves an instant reply." },
+        { "expr": "protect ... from", "meaning": "保护……免受（本文中「为时间设防」）", "example": "the time is protected from routine work and passive entertainment → Protect your morning hours from interruption if you want real progress." },
+        { "expr": "ruin", "meaning": "毁掉、破坏（比 damage 更彻底）", "example": "Missing a day does not ruin the system → One failed exam does not ruin an entire academic career." },
+        { "expr": "commute", "meaning": "通勤（上下班往返；既可作 v. 也可作 n.）", "example": "You still answer messages, work, commute, rest → She commutes for an hour each way, so she listens to audiobooks on the train." }
+      ],
+      "insiders": [
+        { "word": "point to", "common": "v. 用手指向", "here": "v. 举出、指出（证据）（cannot point to anything＝拿不出任何像样的成果）" },
+        { "word": "consume", "common": "v. 吃、喝掉", "here": "v. 耗尽（时间）——碎片娱乐「吃掉」的那一小时，用「吞噬」意象呼应首段的空耗" },
+        { "word": "reserve", "common": "v. 预订（餐厅/座位）", "here": "v. 预留（时间专用），reserve time for sth 是时间管理高频搭配" },
+        { "word": "invest", "common": "v. 投资（金钱）", "here": "v. 投入（时间/注意力），is being invested in abilities＝把每周的一部分「投」给未来能力" },
+        { "word": "balance", "common": "n. 平衡、均衡", "here": "n. 配比、格局（changes the balance＝改变一天的时间构成比例）" },
+        { "word": "session", "common": "n. 会议、一场（活动）", "here": "n. 一段（专注学习的）时间（these quiet sessions＝一次次安静的学习时段）" },
+        { "word": "formula", "common": "n. （数学/化学）公式、分子式", "here": "n. 固定的套路、刻板的规则（a rigid formula＝必须机械执行的死规矩）" }
+      ],
+      "gems": [
+        { "word": "supposedly", "usage": "所谓、据称（带反讽：that supposedly does not exist——那个「据说不存在」的一小时，暗讽自我欺骗）" },
+        { "word": "conveniently", "usage": "恰好、方便地（do not have one waiting conveniently——反讽用法：时间不会「贴心地」等人）" },
+        { "word": "roughly", "usage": "大约、粗略算来（roughly 250 hours——数字论证时的严谨留白，比 about 书面）" },
+        { "word": "rigid", "usage": "僵硬死板的（a rigid formula——与 flexible 观点相对，贬义形容词精准打击「教条主义」）" },
+        { "word": "quiet", "usage": "安静的、不起眼的（these quiet sessions——以「静」衬长期主义的低调积累，与爆红式努力相对）" },
+        { "word": "deliberate", "usage": "刻意的、有意图的（deliberate learning——源自「深思熟虑」义，强调主动设计而非顺其自然）" },
+        { "word": "whatever", "usage": "无论什么（dealt with whatever appeared——一个词写出「被动救火式」的一天，比 anything 更强调无选择权）" }
+      ]
+    }
+  }
+}
