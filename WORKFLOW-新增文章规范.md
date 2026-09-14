@@ -18,7 +18,7 @@
    ↓
 ③ node build.js（编译为 assets/articles.js）+ 数据校验
    ↓
-④ jsdom 冒烟测试（24 项，全过才继续）
+④ jsdom 冒烟测试（38 项，全过才继续）
    ↓
 ⑤ git commit + SSH push
    ↓
@@ -141,9 +141,10 @@ NODE_PATH="C:/Users/user/.workbuddy/binaries/node/workspace/node_modules" \
   "C:/Users/user/.workbuddy/binaries/node/versions/22.22.2-2/node.exe" smoke.js
 ```
 
-- 预期 `ALL SMOKE TESTS PASSED`（24 项：目录渲染、reader 五区块、净化、知识库聚合等）。
+- 预期 `ALL SMOKE TESTS PASSED`（38 项：目录渲染、reader 五区块、净化、知识库聚合、云端多用户 mock 等）。
 - ⚠️ 测试断言已改为**动态统计**（篇数=STATIC_ARTICLES.length、聚合行数=各篇 concepts 之和），
   新增文章不应再出现"篇数不符"失败；若出现，先怀疑 articles.js 未重新 build。
+- 云端用例（第 5 段）用 mock supabase 跑在内存里，不触网；真实 Supabase 配置在 `assets/cloud.js`。
 - jsdom 未安装时：`npm install jsdom --prefix C:/Users/user/.workbuddy/binaries/node/workspace`。
 
 ---

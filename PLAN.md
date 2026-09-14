@@ -21,19 +21,32 @@
 │   ├── app.js            # 数据层 + 目录/知识库页面逻辑
 │   ├── reader.js         # 学习页渲染逻辑
 │   ├── ai.js             # AI 生成模块（OpenAI 兼容 API 调用 + Prompt）
+│   ├── cloud.js          # 云端多用户层（Supabase Auth + 文章/知识库同步）
+│   ├── vendor/supabase.min.js  # supabase-js v2 UMD（收进仓库，免外部 CDN）
 │   ├── seed.js           # 兜底样例（build 未运行时仍可体验）
 │   └── articles.js       # 【自动生成】线上文章库（勿手改）
+├── supabase-setup.sql    # Supabase 建表 + RLS 初始化脚本（控制台 SQL Editor 执行一次）
 └── 导读指引.md.txt        # 原始样例（格式与内容深度的参照基准）
 ```
 
-**技术选型**：纯前端（HTML + CSS + 原生 JS），零构建依赖。采用**双轨数据模型**：
+**技术选型**：纯前端（HTML + CSS + 原生 JS），零构建依赖。采用**三轨数据模型**：
 
 | 轨 | 存放位置 | 谁可见 | 如何产生 |
 |---|---|---|---|
 | 线上文章（published） | 仓库 `content/*.json` → `build.js` 聚合为 `assets/articles.js` | **所有访客**（随 GitHub Pages 发布） | 创作者把草稿 json 放入 content 后推送 |
-| 本地草稿（draft） | 创作者浏览器 localStorage | 仅创作者本机 | 页面内 AI 生成（BYOK） |
+| 云端文章（cloud） | Supabase Postgres（RLS 保护），浏览器直连 | 私密=仅本人；公开=所有访客 | 登录用户在学习页一键同步/设为公开 |
+| 本地草稿（draft） | 浏览器 localStorage（兼作云端数据的本地缓存） | 仅本机 | 页面内 AI 生成（BYOK） |
 
-AI 通过 BYOK（Kimi / GLM 等 OpenAI 兼容 Key）在**创作者浏览器**调用；普通访客阅读线上内容**无需 Key**。
+AI 通过 BYOK（Kimi / GLM 等 OpenAI 兼容 Key）在**用户浏览器**调用；普通访客阅读线上/云端公开内容**无需 Key、无需登录**。
+
+### M5 多用户云同步（assets/cloud.js + Supabase）
+- 认证：邮箱 + 密码（注册/登录），会话存浏览器 localStorage，未登录时功能与纯本地版完全一致。
+- 表：`articles`（owner/slug/visibility/payload jsonb）、`kb_extra`（owner/data jsonb），
+  建表与 RLS 策略见 `supabase-setup.sql`（私密仅本人读写，公开所有人可读）。
+- 同步时机：登录/页面加载时全量同步一次（本地未上云草稿自动上传为私密 → 拉取「我的 + 公开」重建缓存 →
+  知识库云端优先、首次登录本地迁移上云）；此后写操作即时推送。
+- 可见性：学习页「🌐 设为公开 / 🔒 设为私密」一键切换；他人公开文章只读（无删除按钮）。
+- slug 冲突：不同用户同名 slug 在聚合时自动追加属主短码，保证页面路由唯一。
 
 ---
 

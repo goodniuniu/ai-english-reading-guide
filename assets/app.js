@@ -50,14 +50,36 @@
       return !staticIds()[id] && drafts().some(function (g) { return g.id === id; });
     },
     isPublished: function (id) { return !!staticIds()[id]; },
-    /* 生成新草稿入库（id 与线上冲突时自动改名） */
+    /* 文章所属轨道：static 线上仓库 / cloud-public 云端公开 / cloud-private 云端私密 / local 本机草稿 */
+    trackOf: function (g) {
+      if (staticIds()[g.id]) return "static";
+      if (g && g._cloud) return g._visibility === "public" ? "cloud-public" : "cloud-private";
+      return "local";
+    },
+    /* 生成新草稿入库（id 与线上冲突时自动改名）；登录后自动同步到云端（私密） */
     addDraft: function (guide) {
       var list = drafts();
       list.unshift(guide);
       saveDrafts(list);
+      if (window.ERCLOUD && ERCLOUD.loggedIn()) {
+        ERCLOUD.saveArticle(guide, "private").then(function () {
+          var l = drafts();
+          l.forEach(function (x) {
+            if (x.id === guide.id) {
+              x._cloud = guide._cloud; x._cid = guide._cid;
+              x._visibility = guide._visibility; x._mine = true;
+            }
+          });
+          saveDrafts(l);
+        }).catch(function () { /* 云端不可达时保留本地草稿，下次同步再试 */ });
+      }
     },
-    /* 删除草稿（线上内容不可本地删除，需删 content/*.json 后重新 build） */
+    /* 删除草稿：云端文章（本人）一并删除云端记录；线上仓库内容需删 content/*.json 后重新 build */
     removeDraft: function (id) {
+      var victim = drafts().filter(function (g) { return g.id === id; })[0];
+      if (victim && victim._cloud && victim._mine && window.ERCLOUD) {
+        ERCLOUD.removeArticle(victim).catch(function () {});
+      }
       var list = drafts().filter(function (g) { return g.id !== id; });
       saveDrafts(list);
     },
@@ -102,7 +124,11 @@
       }
       return { concepts: [], verbs: [], insiders: [], gems: [] };
     },
-    saveExtra: function (extra) { localStorage.setItem(LS_KB_EXTRA, JSON.stringify(extra)); },
+    /* 保存手动词条；登录后同步推送到云端（fire-and-forget） */
+    saveExtra: function (extra) {
+      localStorage.setItem(LS_KB_EXTRA, JSON.stringify(extra));
+      if (window.ERCLOUD && ERCLOUD.loggedIn()) ERCLOUD.pushKb(extra).catch(function () {});
+    },
     aggregate: function (cat) {
       var list = [], seen = {};
       var push = function (item, src, manual) {
@@ -211,6 +237,10 @@
 
   window.ER = { DB: DB, KB: KB, CFG: CFG, esc: esc, cleanStr: cleanStr, deepClean: deepClean, toast: toast, overlay: overlay, slugify: slugify, vocabCount: vocabCount, downloadFile: downloadFile };
 
+  /* 云端初始化：恢复登录会话并同步一次（未登录/无网络时静默跳过）。
+     页面先用 localStorage 缓存渲染，ER.ready 落定后再重绘。 */
+  ER.ready = (window.ERCLOUD ? ERCLOUD.init() : Promise.resolve(false));
+
   /* ══════════════════════════════════════════
      index.html（目录页）逻辑
   ══════════════════════════════════════════ */
@@ -225,9 +255,16 @@
       }
       box.innerHTML = list.map(function (g) {
         var v = vocabCount(g);
-        var tag = DB.isDraft(g.id)
-          ? '<span class="chip" style="background:#eef3ff;color:#1d4ed8">本地草稿</span>'
-          : '<span class="chip">线上发布</span>';
+        var track = DB.trackOf(g);
+        var tag =
+          track === "static" ? '<span class="chip">线上发布</span>' :
+          track === "cloud-public" ? '<span class="chip" style="background:#e7f6ec;color:#15803d">' + (g._mine ? "云端 · 已公开" : "云端 · 公开分享") + '</span>' :
+          track === "cloud-private" ? '<span class="chip" style="background:#fdf3e3;color:#92400e">云端 · 私密</span>' :
+          '<span class="chip" style="background:#eef3ff;color:#1d4ed8">本地草稿</span>';
+        var metaText =
+          track === "static" ? "发布于 " + (g.addedAt || "").slice(0, 10) :
+          track === "local" ? "未发布草稿" :
+          "云端同步 · " + (g.addedAt || "").slice(0, 10);
         return '<div class="art-card" data-id="' + esc(g.id) + '">' +
           '<div class="kicker">' + esc(cleanStr(g.source || "The Economist")) + ' · ' + esc(g.date || "") + '</div>' +
           '<h3>' + esc(cleanStr(g.title)) + '</h3>' +
@@ -237,7 +274,7 @@
           ((g.guide.questions || []).length ? '<span class="chip">思考题 ' + g.guide.questions.length + '</span>' : '') +
           ((g.guide.sentences || []).length ? '<span class="chip">长难句 ' + g.guide.sentences.length + '</span>' : '') +
           '</div>' +
-          '<div class="meta"><span>' + (DB.isDraft(g.id) ? "未发布草稿" : "发布于 " + (g.addedAt || "").slice(0, 10)) + '</span><span>进入学习 →</span></div>' +
+          '<div class="meta"><span>' + esc(metaText) + '</span><span>进入学习 →</span></div>' +
           '</div>';
       }).join("");
       box.querySelectorAll(".art-card").forEach(function (el) {
@@ -245,6 +282,64 @@
       });
     }
     renderCatalog();
+
+    /* ── 账号与云同步 ── */
+    var authEls = {
+      tag: document.getElementById("authStateTag"),
+      loggedOut: document.getElementById("authLoggedOut"),
+      loggedIn: document.getElementById("authLoggedIn"),
+      email: document.getElementById("authEmail"),
+      pass: document.getElementById("authPass"),
+      userEmail: document.getElementById("authUserEmail"),
+      syncStatus: document.getElementById("syncStatus")
+    };
+    function renderAuth() {
+      var u = window.ERCLOUD && ERCLOUD.user();
+      authEls.loggedOut.style.display = u ? "none" : "";
+      authEls.loggedIn.style.display = u ? "" : "none";
+      authEls.tag.textContent = u ? "云端同步已开启" : "未登录 · 仅本机可用";
+      if (u) authEls.userEmail.textContent = u.email || "";
+    }
+    function afterAuthChange(msg) {
+      ERCLOUD.sync().then(function (ok) {
+        renderCatalog(); renderAuth();
+        toast(msg + (ok ? "，云端数据已同步 ✓" : "（云端暂不可达，先用本地缓存）"), !ok);
+      });
+    }
+    document.getElementById("loginBtn").addEventListener("click", function () {
+      var em = authEls.email.value.trim(), pw = authEls.pass.value;
+      if (!em || !pw) { toast("请输入邮箱和密码", true); return; }
+      overlay(true, "正在登录……");
+      ERCLOUD.signIn(em, pw)
+        .then(function () { overlay(false); afterAuthChange("登录成功"); })
+        .catch(function (e) { overlay(false); toast("登录失败：" + e.message, true); });
+    });
+    document.getElementById("signupBtn").addEventListener("click", function () {
+      var em = authEls.email.value.trim(), pw = authEls.pass.value;
+      if (!em || !pw) { toast("请输入邮箱和密码", true); return; }
+      if (pw.length < 6) { toast("密码至少 6 位", true); return; }
+      overlay(true, "正在注册……");
+      ERCLOUD.signUp(em, pw)
+        .then(function () { overlay(false); afterAuthChange("注册成功，已自动登录"); })
+        .catch(function (e) { overlay(false); toast(e.message, !e.needConfirm); });
+    });
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+      ERCLOUD.signOut().then(function () { renderAuth(); toast("已退出登录（本机缓存保留）"); });
+    });
+    document.getElementById("syncBtn").addEventListener("click", function () {
+      authEls.syncStatus.textContent = "· 同步中……";
+      ERCLOUD.sync().then(function (ok) {
+        authEls.syncStatus.textContent = ok ? "· 已同步 " + new Date().toLocaleTimeString() : "· 同步失败，稍后重试";
+        renderCatalog();
+      });
+    });
+    renderAuth();
+
+    /* 云端首次同步完成后重绘（登录用户可见云端文章） */
+    ER.ready.then(function (loggedIn) {
+      renderCatalog(); renderAuth();
+      if (loggedIn) authEls.syncStatus.textContent = "· 云端已同步";
+    });
 
     document.getElementById("fileInput").addEventListener("change", function (e) {
       var f = e.target.files[0];
@@ -403,5 +498,7 @@
     });
 
     render();
+    /* 云端同步完成后重绘（登录后知识库以云端为准） */
+    ER.ready.then(function (loggedIn) { if (loggedIn) render(); });
   }
 })();
