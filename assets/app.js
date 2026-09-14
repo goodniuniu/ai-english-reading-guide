@@ -169,9 +169,10 @@
   /* ── AI 配置 ────────────────────────────── */
   var CFG = {
     presets: {
-      kimi:  { baseUrl: "https://api.moonshot.cn/v1/chat/completions", model: "kimi-k2-0905-preview", label: "Kimi (Moonshot)" },
-      glm:   { baseUrl: "https://open.bigmodel.cn/api/paas/v4/chat/completions", model: "glm-4.6", label: "智谱 GLM" },
-      custom:{ baseUrl: "", model: "", label: "自定义 (OpenAI 兼容)" }
+      kimi:    { baseUrl: "https://api.moonshot.cn/v1/chat/completions", model: "kimi-k2.6", label: "Kimi (Moonshot)" },
+      deepseek:{ baseUrl: "https://api.deepseek.com/chat/completions", model: "deepseek-v4-flash", label: "DeepSeek" },
+      glm:     { baseUrl: "https://open.bigmodel.cn/api/paas/v4/chat/completions", model: "glm-5.3", label: "智谱 GLM" },
+      custom:  { baseUrl: "", model: "", label: "自定义 (OpenAI 兼容)" }
     },
     load: function () {
       return lsGet(LS_CFG) || { preset: "kimi", baseUrl: this.presets.kimi.baseUrl, apiKey: "", model: this.presets.kimi.model };

@@ -56,7 +56,7 @@ AI 通过 BYOK（Kimi / GLM 等 OpenAI 兼容 Key）在**用户浏览器**调用
 - 卡片式目录：标题 / 副标题 / 日期 / 收录时间 / 词汇统计，点击进入学习页；
   卡片标注「线上发布」或「本地草稿」。
 - 导入区：粘贴全文 或 上传 .txt 文件 → 一键"AI 生成导读"，结果先落为本地草稿。
-- 设置面板：AI 服务商预设（Kimi / GLM / 自定义）、Base URL、API Key、模型名。
+- 设置面板：AI 服务商预设（Kimi / DeepSeek / GLM / 自定义）、Base URL、API Key、模型名。
 - 数据管理：导出/导入 JSON 备份（用于草稿迁移）+ 发布流程提示。
 
 ### M2 AI 导读生成（assets/ai.js）
