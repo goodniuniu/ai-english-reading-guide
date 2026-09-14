@@ -375,6 +375,26 @@
       CFG.save(cfg); toast("设置已保存（仅存于本机浏览器）");
     });
 
+    /* 测试连接：最小请求验证地址/Key/模型名 */
+    document.getElementById("testCfg").addEventListener("click", async function () {
+      var res = document.getElementById("cfgTestResult");
+      var testCfgData = {
+        baseUrl: els.baseUrl.value.trim(), apiKey: els.key.value.trim(), model: els.model.value.trim()
+      };
+      if (!testCfgData.baseUrl || !testCfgData.apiKey || !testCfgData.model) {
+        res.style.color = "#b91c1c"; res.textContent = "请先填全 API 地址、Key 和模型名"; return;
+      }
+      res.style.color = "#9aa1ab"; res.textContent = "测试中……";
+      try {
+        var r = await window.ERAI.testConnection(testCfgData);
+        if (r.ok) { res.style.color = "#15803d"; res.textContent = "✓ 连接成功（" + r.ms + "ms，模型 " + r.model + "）"; }
+        else { res.style.color = "#b91c1c"; res.textContent = "✗ " + r.detail; }
+      } catch (e) {
+        res.style.color = "#b91c1c";
+        res.textContent = "✗ 请求无法发出：" + (e.message || e) + "（多为跨域/网络问题，自定义海外服务需浏览器代理）";
+      }
+    });
+
     /* 生成导读 → 本地草稿 */
     var genErr = document.getElementById("genError");
     function showGenError(msg) {

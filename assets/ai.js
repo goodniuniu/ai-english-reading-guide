@@ -114,5 +114,29 @@ JSON 结构要求（字段名必须完全一致）：
     throw lastErr;
   }
 
-  window.ERAI = { generateGuide: generateGuide, extractJson: extractJson, normalize: normalize };
+  /* 连接测试：最小请求验证 Base URL / Key / 模型名 是否匹配可用 */
+  async function testConnection(cfg) {
+    var t0 = Date.now();
+    var resp = await fetch(cfg.baseUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + cfg.apiKey },
+      body: JSON.stringify({
+        model: cfg.model,
+        messages: [{ role: "user", content: "ping" }],
+        max_tokens: 8
+      })
+    });
+    var ms = Date.now() - t0;
+    if (!resp.ok) {
+      var detail = "";
+      try { var ej = await resp.json(); detail = (ej.error && (ej.error.message || ej.error.code)) || ej.message || ""; } catch (e) {}
+      return { ok: false, ms: ms, detail: "HTTP " + resp.status + (detail ? "：" + detail : "") };
+    }
+    var data = await resp.json().catch(function () { return null; });
+    var content = data && data.choices && data.choices[0] && data.choices[0].message;
+    if (!content) return { ok: false, ms: ms, detail: "返回格式异常（非 OpenAI 兼容响应）" };
+    return { ok: true, ms: ms, model: data.model || cfg.model };
+  }
+
+  window.ERAI = { generateGuide: generateGuide, extractJson: extractJson, normalize: normalize, testConnection: testConnection };
 })();
