@@ -55,6 +55,7 @@
         <button class="btn primary" id="genBtn">✦ AI 生成导读（本地草稿）</button>
         <label class="btn" style="cursor:pointer">📄 选择 .txt 文件<input type="file" id="fileInput" accept=".txt,.md" style="display:none"></label>
       </div>
+      <div id="genError" style="display:none;margin-top:10px;padding:10px 14px;border-radius:8px;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;font-size:13px;line-height:1.6"></div>
       <div class="hintline">生成结果为<b>本地草稿</b>（仅你可见）。确认无误后在学习页点「⬇ 导出本篇 JSON」→ 存到项目 <code>content/</code> 目录 → 运行 <code>node build.js</code> → <code>git push</code>，即可向线上所有访客发布（详见学习页发布指引）。</div>
     </div>
 

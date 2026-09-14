@@ -74,7 +74,7 @@ JSON 结构要求（字段名必须完全一致）：
         { role: "user", content: "请为下面这篇《经济学人》文章生成导读 JSON：\n\n" + text }
       ],
       temperature: 0.3,
-      max_tokens: 8000
+      max_tokens: 16000
     };
     var resp = await fetch(cfg.baseUrl, {
       method: "POST",
@@ -83,12 +83,17 @@ JSON 结构要求（字段名必须完全一致）：
     });
     if (!resp.ok) {
       var detail = "";
-      try { detail = (await resp.json()).error && (await resp.json()).error.message || ""; } catch (e) {}
+      try { var ej = await resp.json(); detail = (ej.error && (ej.error.message || ej.error.code)) || ej.message || ""; } catch (e) {}
       throw new Error("API " + resp.status + (detail ? "：" + detail : "（请检查 Key、Base URL 与模型名）"));
     }
     var data = await resp.json();
-    var content = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
-    if (!content) throw new Error("API 返回内容为空");
+    var choice = data.choices && data.choices[0];
+    var content = choice && choice.message && choice.message.content;
+    if (!content) {
+      /* 推理模型的思考过程可能耗尽 max_tokens 导致正文为空/截断 */
+      if (choice && choice.finish_reason === "length") throw new Error("输出被长度截断（模型思考占用了 token 额度），请重试或更换模型");
+      throw new Error("API 返回内容为空");
+    }
     return content;
   }
 

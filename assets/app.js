@@ -376,12 +376,20 @@
     });
 
     /* 生成导读 → 本地草稿 */
+    var genErr = document.getElementById("genError");
+    function showGenError(msg) {
+      if (!genErr) return;
+      genErr.style.display = "";
+      genErr.innerHTML = "<b>生成失败</b>：" + esc(msg) +
+        '<br>排查：① 在「AI 设置」点一下所用服务商的预设按钮（刷新为最新模型名）并保存；② 确认 Key 与服务商匹配且有额度；③ 按 F12 → Console 查看详细报错。';
+    }
     document.getElementById("genBtn").addEventListener("click", async function () {
       var text = document.getElementById("pasteBox").value.trim();
       if (!text) { toast("请先粘贴或上传文章全文", true); return; }
       cfg.baseUrl = els.baseUrl.value.trim(); cfg.apiKey = els.key.value.trim(); cfg.model = els.model.value.trim();
       CFG.save(cfg);
       if (!cfg.apiKey) { toast("请先在下方填写 API Key", true); return; }
+      if (genErr) genErr.style.display = "none";
       overlay(true, "AI 正在精读文章并生成导读，约需 1 分钟……");
       try {
         var guide = await window.ERAI.generateGuide(text, cfg);
@@ -392,6 +400,8 @@
         setTimeout(function () { location.href = "reader.html?id=" + encodeURIComponent(guide.id); }, 600);
       } catch (err) {
         overlay(false);
+        console.error("[生成导读失败]", err);
+        showGenError(err.message || String(err));
         toast("生成失败：" + err.message, true);
       }
     });
