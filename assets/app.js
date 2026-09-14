@@ -171,7 +171,7 @@
     presets: {
       kimi:    { baseUrl: "https://api.moonshot.cn/v1/chat/completions", model: "kimi-k2.6", label: "Kimi (Moonshot)" },
       deepseek:{ baseUrl: "https://api.deepseek.com/chat/completions", model: "deepseek-v4-flash", label: "DeepSeek" },
-      glm:     { baseUrl: "https://open.bigmodel.cn/api/paas/v4/chat/completions", model: "glm-5.3", label: "智谱 GLM" },
+      glm:     { baseUrl: "https://open.bigmodel.cn/api/paas/v4/chat/completions", model: "glm-5.3", label: "智谱 GLM", extraBody: { thinking: { type: "disabled" } } },
       custom:  { baseUrl: "", model: "", label: "自定义 (OpenAI 兼容)" }
     },
     load: function () {
@@ -366,6 +366,7 @@
       b.addEventListener("click", function () {
         var p = CFG.presets[b.dataset.preset];
         cfg.preset = b.dataset.preset; cfg.baseUrl = p.baseUrl; cfg.model = p.model;
+        cfg.extraBody = p.extraBody || null;
         fillCfg();
       });
     });

@@ -74,8 +74,10 @@ JSON 结构要求（字段名必须完全一致）：
         { role: "user", content: "请为下面这篇《经济学人》文章生成导读 JSON：\n\n" + text }
       ],
       temperature: 0.3,
-      max_tokens: 16000
+      max_tokens: 32768
     };
+    /* 预设可带附加参数（如 GLM 关闭 thinking，避免推理占用输出额度） */
+    if (cfg.extraBody) Object.assign(body, cfg.extraBody);
     var resp = await fetch(cfg.baseUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": "Bearer " + cfg.apiKey },
